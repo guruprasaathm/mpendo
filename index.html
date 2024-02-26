@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MPendo</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="fontawesome-free-6.2.1-web/css/all.css" >    
+    <link rel="icon" href="justice-svgrepo-com.svg">
+</head>
+<body>
+    <div class="header">
+        <div class="title">
+            <p>MPENDO</p>
+        </div>
+    </div>
+    <form class="content" >
+
+        <div class="anonymous">
+            <p>Stay anonymous?</p>
+            <div class="switch">
+                <label class="toggle">
+                    <input type="checkbox" class="toggleinput" onclick="ShowHideDiv()" name="anon">
+                    <div class="togglefill"></div>
+                </label>
+            </div>
+        </div>
+        <div class="name">
+            <input type="text" class="nameinput" autocomplete="off" placeholder=" " name="name" required>
+            <label class="namelabel" onclick="document.getElementsByClassName('nameinput')[0].focus()"> Name </label>
+        </div>
+        <div class="regno">
+            <input type="text" class="reginput" autocomplete="off" placeholder=" " name="regno" required>
+            <label class="reglabel" onclick="document.getElementsByClassName('reginput')[0].focus()"> Registration No. </label>
+        </div>
+        <div class="dept">
+            <input type="text" class="deptinput" placeholder="Department"  name="dept"  readonly />
+            <div class="option">
+                <div onclick="show('Civil')">Civil</div>
+                <div onclick="show('CSE')">CSE</div>
+                <div onclick="show('EEE')">EEE</div>
+                <div onclick="show('ECE')">ECE</div>
+                <div onclick="show('Mech')">Mech</div>
+                <div onclick="show('AI/ML')">AI/ML</div>
+            </div>
+        </div>
+        <div class="facname">
+            <input type="text" class="facnameinput" autocomplete="off" placeholder=" " name="facname" required>
+            <label class="facnamelabel" onclick="document.getElementsByClassName('facnameinput')[0].focus()">Faculty Name</label>
+            <div class="searchns">
+            </div>
+        </div>
+        <div class="Ratingdiv">
+            <div class="titlerat">
+                <p>Overall Rating</p>
+            </div>
+                <div class="Rating">
+                    <div class="stars">
+                    <input type="radio" id="star5" name="stars" value="5"><label for="star5" class="fa fa-star" id="starl5"></label>
+                    <input type="radio" id="star4" name="stars" value="4"><label for="star4" class="fa fa-star" id="starl4"></label>
+                    <input type="radio" id="star3" name="stars" value="3"><label for="star3" class="fa fa-star" id="starl3"></label>
+                    <input type="radio" id="star2" name="stars" value="2"><label for="star2" class="fa fa-star" id="starl2"></label>
+                    <input type="radio" id="star1" name="stars" value="1"><label for="star1" class="fa fa-star" id="starl1"></label>
+                    </div>
+                </div>
+            </div>  
+        
+        <div class="Button-Sub">
+            <button class="bt1" type="button" onclick="Submit()">Submit</button>
+            <button type="button"><a href="scores.html">Scores</a></button>
+        </div>
+        <div class="Submit-Success">
+            <p>Submitted Successfully!</p>
+        </div>
+    </form>
+    
+    <div class="footer">
+        <div class="footer-by">
+            <p>A project by Nathan and Guru</p>
+        </div>
+    </div>
+    
+
+    <script>
+        function show(anything){
+            document.querySelector('.deptinput').value=anything;
+        } 
+        let dept=document.querySelector('.dept');
+        dept.onclick=function(){
+            dept.classList.toggle('active');
+        }
+        
+        function ShowHideDiv() {
+            var name = document.getElementsByClassName("name");
+            var regno = document.getElementsByClassName("regno");
+            var dept = document.getElementsByClassName("dept");
+            var check=document.getElementsByClassName("toggleinput");
+            
+            if(check[0].checked==true){
+                name[0].style.display="none";
+                regno[0].style.display="none";
+                dept[0].style.display="none";
+                
+            }else{
+                name[0].style.display="block";
+                regno[0].style.display="block";
+                dept[0].style.display="block";
+                
+            }
+        }
+        
+    </script>
+    <script src="search.js"></script>
+    <script src="result.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Fugaz One');
+@import url('https://fonts.googleapis.com/css?family=Secular One');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Mulish');
+body{
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    background-color: #414141;  
+}
+.header{
+    background-color: #0BFF8A;  
+    width: 100%;
+    position: fixed;
+    z-index: 2;    
+}
+.title{
+    height:65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Fugaz One';
+    color: #ffffff;
+    font-weight: bolder;
+    font-size: xx-large;
+}
+.footer{
+    background-color: #0BFF8A; 
+    height:65px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: 2;
+}
+.footer-by{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Secular One';
+    
+}
+.content{
+    position: relative;
+    top:100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+table{
+    color: #efefef;
+    font-family: 'Roboto';
+    font-size: medium;
+}
+table, th, td{
+    border: 1px solid #ffffff;
+    border-collapse: collapse;
+  }
+.content{
+    padding-bottom: 100px;
+}
+th,td{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 50px;
+    padding-right: 50px;
+    
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+@media screen and (max-width: 649px){
+    table{
+        width: 200px;
+    }
+    .content{
+        padding-bottom: 100px;
+    }
+    th,td{
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 5px;
+        padding-right: 2px;
+    
+    }
+}

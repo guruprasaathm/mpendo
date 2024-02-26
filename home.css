@@ -1,0 +1,459 @@
+@import url('https://fonts.googleapis.com/css?family=Fugaz One');
+@import url('https://fonts.googleapis.com/css?family=Secular One');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Mulish');
+
+body{
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    background-color: #414141;
+    
+}
+.header{
+    
+    background-color: #0BFF8A;  
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+    
+}
+.title{
+      -webkit-text-stroke: 3px black;
+
+    height:65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Fugaz One';
+    color: #ffffff;
+    font-weight: bolder;
+    font-size: xx-large;
+}
+
+.footer{
+    background-color: #0BFF8A; 
+    height:65px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: 2;
+}
+.footer-by{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Secular One';
+    
+}
+.content{
+    position: relative;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 120px;
+    top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 20px;
+    overflow-y: hidden;
+    z-index: 1;
+    
+}
+.name{
+    position: relative;
+    font-family: 'Roboto';
+    font-size: medium;
+}
+.nameinput{
+    position:relative;
+    width: 400px;
+    height: 40px;
+    left: 5px;
+    background-color: #414141;
+    outline: none;
+    border-color: #0BFF8A;
+    color: #ffffff;
+    border-radius: 0.2rem;
+    padding-left: 10px;
+    font-size: medium;
+}
+
+.nameinput:focus{
+    border-color: #ffffff;
+}
+.namelabel{
+    position: absolute;
+    left: 11px;
+    top: 13px;
+    color: #ffffff;
+    transition: top 200ms ease-in,
+            left 200ms ease-in,
+            font-size 200ms ease-in;
+    background-color: #414141;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    cursor: text;
+}
+.nameinput:focus~.namelabel,.nameinput:not(:placeholder-shown).nameinput:not(:focus)~.namelabel{    
+    top:-0.4rem;
+    font-size: 0.8rem;
+}
+.facname{
+    position: relative;
+    font-family: 'Roboto';
+
+}
+.facnamelabel{
+    position: absolute;
+    left: 9px;
+    top:  9px;
+    color: #ffffff;
+    transition: top 200ms ease-in,
+            left 200ms ease-in,
+            font-size 200ms ease-in;
+    background-color: #414141;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    cursor: text;
+}
+.facnameinput{
+    position: relative;
+    width:400px ;
+    left:5px;
+    height:35px;
+    outline: none;
+    border-radius: 0.2rem;
+    background-color: #414141;
+    border-color: #0BFF8A;
+    color: #ffffff;
+    font-size: medium;
+    padding-left: 10px;
+}
+.facnameinput:focus{
+    border-color: #ffffff;
+}
+.facnameinput:focus~.facnamelabel,.facnameinput:not(:placeholder-shown).facnameinput:not(:focus)~.facnamelabel{    
+    top:-0.4rem;
+    font-size: 0.8rem;
+}
+.facname.active .searchns{
+    opacity: 1;
+    pointer-events: auto;
+}
+.facname.active .searchns li{
+    display: block;
+}
+.searchns{
+    background-color: #ffffff;
+    width: 410px;
+    position: relative;
+    bottom: 1px;
+    left: 5px;
+    border-bottom-left-radius: 0.2rem;
+    border-bottom-right-radius:0.2rem ;
+}
+.searchns li{
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    list-style: none;
+    display: none;
+}
+.searchns li:hover{
+    background: #efefef;
+    cursor: pointer;
+}
+.regno{
+    position: relative;
+    font-family: 'Roboto';
+    
+}
+.reglabel{
+    position: absolute;
+    left: 9px;
+    top:  9px;
+    color: #ffffff;
+    transition: top 200ms ease-in,
+            left 200ms ease-in,
+            font-size 200ms ease-in;
+    background-color: #414141;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    cursor: text;
+}
+
+.reginput:focus{
+    border-color: #ffffff;
+}
+
+.reginput{
+    position: relative;
+    width:400px ;
+    left:5px;
+    height:35px;
+    outline: none;
+    border-radius: 0.2rem;
+    background-color: #414141;
+    border-color: #0BFF8A;
+    color: #ffffff;
+    font-size: medium;
+    padding-left: 10px;
+}
+.reginput:focus~.reglabel,.reginput:not(:placeholder-shown).reginput:not(:focus)~.reglabel{    
+    top:-0.4rem;
+    font-size: 0.8rem;
+}
+.dept{
+    position: relative;
+    font-family: 'Roboto';
+    
+}
+.dept::before{
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border: 2px solid #fff;
+    left:390px;
+    top:15px;
+    z-index: 10000;
+    border-top: 2px solid #414141;
+    border-right: 2px solid #414141;
+    transform: rotate(-45deg);
+    transition: 0.5s;
+    pointer-events: none;
+
+}
+.deptinput{
+    position: relative;
+    text-indent: 6px;
+    width:405px ;
+    padding-left: 4px;
+    left:5px;
+    height:35px;
+    outline: none;
+    border-radius: 0.2rem;
+    background-color: #414141;
+    border-color: #0BFF8A;
+    font-family: 'Roboto';
+    font-size: medium;
+    color: #ffffff;
+    cursor: pointer;
+}
+input::placeholder{
+    color: #ffffff;
+    font-size: medium;
+    
+}
+.dept .option{
+    position:relative;
+    margin-top: 5px;
+    width: 410px;
+    left: 5px;
+    border-radius: 0.2rem;
+    background-color: #ffffff;
+    color: #414141;
+    overflow: hidden;
+    display: none;
+}
+.dept.active .option{
+    display: block;
+}
+.dept.active::before{
+    top:17px;
+    transform: rotate(-225deg);
+}
+
+
+
+.dept .option div{
+    font: 'Roboto';
+    padding-left: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.dept .option div:hover{
+    background-color: #0BFF8A;
+    color: #fff;
+}
+.anonymous{
+    margin-top: 10px;
+    font-weight: bolder;
+    font-size: large;
+    font-family: 'Mulish';
+    color: #ffffff;
+    position: relative;
+    left: 5px;
+}
+.Ratingdiv{
+    position: relative;
+    left: 5px;
+    bottom:10px;
+    width:300px;
+    
+    padding-right: 25px;
+}
+
+.titlerat{
+    
+    font-family: 'Roboto';
+    color: #ffffff;
+    
+    font-size: medium;
+    display: flex;
+    justify-content: center;
+}
+.Rating .stars input{
+    display: none;
+}
+.stars label{
+    font-size: 40px;
+    color: #ffffff;
+    padding: 5px;
+    float: right;
+    transition: all 0.2 ease;
+}
+
+.stars input:not(:checked) ~ label:hover,
+.stars input:not(:checked) ~  label:hover ~ label{
+  color: #fd4;
+}
+.stars input:checked ~  label{
+  color: #fd4;
+}
+.stars input#star5:checked ~ label{
+    color: #fe7;
+    text-shadow: 0 0 20px #952;
+}
+.Button-Sub{
+    position: relative;
+    width: 300px;
+    left: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+a{
+    color: #efefef;
+    text-decoration: none;
+}
+button{ 
+    font-family: 'Roboto';
+    font-size: medium;
+    border-radius: 0.2rem;
+    padding:10px;
+    background-color: #414141;
+    border-color: #0BFF8A;
+    color: #ffffff;
+}
+button:hover{
+    background-color: #0BFF8A;
+    color: #ffffff;
+}
+.bt1{
+    margin-right: 50px;
+}
+.Submit-Success{
+    display: none;
+    position: relative;
+    bottom: 20px;
+    left:5px;
+    font-size: medium;
+    font-family: 'Roboto';
+    color: #fff;
+}
+body::-webkit-scrollbar { 
+    display: none; 
+}
+@media screen and (max-width: 547px) {
+    .nameinput,.reginput,.deptinput,.facnameinput{
+        position: relative;
+        left: 0%;
+        padding-left: 0.2rem; 
+        padding-right: 0.2rem;
+        width:300px;
+    } 
+    .content{
+        padding: 0%;
+        padding-bottom: 100px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .dept::before{
+        left: 285px;
+        top:11px;
+    }
+    .dept .option{
+        width: 310px;
+        position: relative;
+        left:0.5%;
+    }
+    .searchns{
+        width: 310px;
+        position: relative;
+        left:0.3%;
+    }
+    .dept .option div:focus{
+        background-color: #0BFF8A;
+        color: #fff;
+    }
+    .switch{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.toggle{
+    --width: 50px;
+    --height: calc(var(--width)/2);
+    --border-radius: calc(var(--height)/2);
+    display: inline-block;
+    cursor: pointer;
+    display: flex;
+        justify-content: center;
+        align-items: center;
+    background-color: #414141;
+}
+.toggleinput{
+    display: none;
+}
+.togglefill{
+    position: relative;
+    width: var(--width);
+    height: var(--height);
+    border-radius:calc(var(--height)/2);
+    background-color: #ffffff  ;
+    transition: background 0.2s;
+}
+.toggleinput:checked~.togglefill{
+    background: black;
+}
+
+.togglefill::after{
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    height:var(--height);
+    width: var(--height);
+    background-image: url('inc.jpg');
+    background-size: 20px 20px;
+    background-position: center;
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 25);
+    background-repeat: no-repeat;    
+
+}
+.toggleinput:checked~.togglefill::after{
+    
+    background-color: #ffffff;
+    transform: translateX(var(--height));
+}
+
+
+
